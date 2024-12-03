@@ -27,3 +27,43 @@ function nombreEdad(nombre, edad) {
 }
 
 nombreEdad("Tomás", 20);
+
+//SCOPE - Determine el rango donde esta disp una variable (global o local)
+
+//GLOBAL - Fuera de cualquier bloque o funcion
+
+let color = "red";
+
+function colorChange(){
+    color = "blue";
+}
+
+colorChange();
+console.log(color);
+
+//LOCAL - Propia de un bloque o funcion
+
+// function colorChangeEjemploLocal(){
+//     color = "blue";
+//     let auto = "BMW";
+// }
+
+//en este caso la var local es "auto" debido a que esta dentro de una funcion
+
+//Funcion ANONIMA - no tiene nombre esp. y se puede usar para realizar referencias
+
+const resta = function(a, b){
+    return a - b;
+}
+
+console.log(resta(200, 100));
+
+//Funcion ARROW - Formas concisas de escribir funciones anonimas
+
+// const sumar = function(a, b) {
+//     return a + b;
+// };
+
+const sumar = (a, b) => a + b; //arrow (=>) reemplaza a la palabra clave function, las llaves y return, simplificando codigo
+console.log(sumar(8, 8)); 
+
